@@ -8,7 +8,6 @@ public class Main {
             mySet.add("" + (char)i);
         }
         System.out.printf("mySet size: %d\n", mySet.size());
-
         System.out.printf("Remove \"b\": %b\n", mySet.remove("b"));
         System.out.printf("Remove \"z\": %b\n", mySet.remove("z"));
         System.out.printf("Add \"y\": %b\n", mySet.add("y"));
@@ -19,7 +18,8 @@ public class Main {
         MyArrayList<String> myList = new MyArrayList<String>();
         System.out.printf("Add \"123\": %b\n", myList.add("123"));
         System.out.printf("Add \"1234\": %b\n", myList.add("1234"));
-        System.out.printf("Remove 1: %b\n", myList.remove(1));
+        System.out.printf("Get 1: %s\n", myList.get(1));
+        System.out.printf("Remove 1: %s\n", myList.remove(1));
         System.out.printf("AddAll: %b\n", myList.addAll(Arrays.asList(new String[] {"234", "452", "762"})));
         System.out.printf("myList size: %d\n", myList.size());
     }
@@ -71,8 +71,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        System.out.println("\nПроверка HashSet");
         testSet();
+        System.out.println("\nПроверка ArrayList");
         testList();
+        System.out.println("\nПроверка Stream");
         testStudent();
     }
 }

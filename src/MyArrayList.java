@@ -57,7 +57,7 @@ public class MyArrayList<E> {
         checkIndex(index);
         final Object[] oldData = data;
         final E oldValue = (E)oldData[index];
-        System.out.println(oldValue);
+//        System.out.println(oldValue);
         final int newSize = size - 1;
         if (newSize > index) {
             System.arraycopy(oldData, index + 1, data, index, newSize - index);
@@ -86,6 +86,11 @@ public class MyArrayList<E> {
         }
         index = i;
         return remove(index);
+    }
+
+    public E get(int index) {
+        checkIndex(index);
+        return (E)data[index];
     }
 
     private Object[] resize(int s) {
